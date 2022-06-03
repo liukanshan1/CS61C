@@ -6,7 +6,7 @@
 unsigned get_bit(unsigned x,
                  unsigned n) {
     int mask = 1;
-    x>>n;
+    x = x >> n;
     return x&mask;
 }
 // Set the nth bit of the value of x to v.
@@ -17,12 +17,12 @@ void set_bit(unsigned * x,
     if (v==0){
         *x = ~*x;
         int mask = 1;
-        mask<<n;
+        mask = mask<<n;
         *x = *x | mask;
         *x = ~*x;
     } else {
         int mask = 1;
-        mask<<n;
+        mask = mask<<n;
         *x = *x | mask;
     }
 }
@@ -31,7 +31,7 @@ void set_bit(unsigned * x,
 void flip_bit(unsigned * x,
               unsigned n) {
     int mask = 1;
-    mask<<n;
+    mask = mask<<n;
     *x = *x^mask;
 }
 
