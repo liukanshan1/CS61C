@@ -58,21 +58,22 @@ vector_t *vector_new() {
     vector_t *retval;
 
     /* First, we need to allocate memory on the heap for the struct */
-    retval = (vector_t *) malloc(1);
+    retval = (struct vector_t*) malloc(sizeof(struct vector_t));
 
     /* Check our return value to make sure we got memory */
     if (retval == NULL) {
         allocation_failed();
     }
+    
 
     /* Now we need to initialize our data.
        Since retval->data should be able to dynamically grow,
        what do you need to do? */
     retval->size = 1;
-    retval->data = (int *) malloc(1);
+    retval->data = (int *) malloc(sizeof(int));
 
     /* Check the data attribute of our vector to make sure we got memory */
-    if (retval->data) {
+    if (retval->data == NULL) {
         free(retval);				//Why is this line necessary?
         allocation_failed();
     }
@@ -126,7 +127,7 @@ void vector_set(vector_t *v, size_t loc, int value) {
     if (loc < v->size) {
         v->data[loc] = value;
     } else {
-        int* temp = malloc(loc + 1);
+        int* temp = malloc(sizeof(int)*(loc + 1));
         for (int i = 0; i < v->size; ++i) {
             temp[i] = v->data[i];
         }
