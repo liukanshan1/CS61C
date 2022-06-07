@@ -73,7 +73,7 @@ map:
     # Call the function in question on that value. DO NOT use a label (be prepared to answer why).
     # Hint: Where do we keep track of the function to call? Recall the parameters of "map".
     ### YOUR CODE HERE ###
-    jal ra, a1
+    jalr ra, a1, 0
 
     # Store the returned value back into the node
     # Where can you assume the returned value is?
@@ -89,7 +89,7 @@ map:
     # Put the address of the function back into a1 to prepare for the recursion
     # THINK: why a1? What about a0?
     ### YOUR CODE HERE ###
-    addi a1, s1, x0
+    add a1, s1, x0
 
     # Recurse
     ### YOUR CODE HERE ###
