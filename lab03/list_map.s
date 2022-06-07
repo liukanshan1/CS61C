@@ -17,7 +17,7 @@ main:
 
     # Load the address of the "square" function into a1 (hint: check out "la" on the green sheet)
     ### YOUR CODE HERE ###
-
+	la a1, square
 
     # Issue the call to map
     jal ra, map
@@ -36,7 +36,7 @@ main:
     
     # Load the addres of the "increment" function into a1 (should be very similar to before)
     ### YOUR CODE HERE ###
-
+	la a1, increment
 
     # Issue the call to map
     jal ra, map
