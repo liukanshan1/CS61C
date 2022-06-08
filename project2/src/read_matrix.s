@@ -58,7 +58,8 @@ read_matrix:
     mv a2, s5
     addi a3, x0, 8
     jal fread
-    beq a0, a3, error3
+    addi a3, x0, 8
+    bne a0, a3, error3
     lw t0, 0(s5) # Row
     lw t1, 4(s5) # Col
     # Prepare Jump
@@ -74,7 +75,7 @@ read_matrix:
     mv a2, s6
     mv a3, s7
     jal fread
-    beq a0, a3, error3
+    bne a0, s7, error3
     # Restore
     mv a0, s0
     mv a1, s1
