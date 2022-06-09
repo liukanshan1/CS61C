@@ -323,11 +323,10 @@ class TestClassify(TestCase):
         # call classify function
         t.call("classify")
         # generate assembly and pass program arguments directly to venus
-        t.execute(args=args)
+        t.execute(args)
 
         # compare the output file and
-        raise NotImplementedError("TODO")
-        # TODO
+
         # compare the classification output with `check_stdout`
 
     @classmethod

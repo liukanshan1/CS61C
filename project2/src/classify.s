@@ -24,7 +24,6 @@ classify:
 	# =====================================
     # LOAD MATRICES
     # =====================================
-    
 	# Prologue
     addi sp, sp, -48
     sw s0, 0(sp)
@@ -51,6 +50,7 @@ classify:
 	lw a0, 0(s1)
 	mv a1, s3
     addi a2, s3, 4
+    ebreak
     jal read_matrix
 	mv s4, a0 # m0
     # Load pretrained m1
@@ -79,6 +79,7 @@ classify:
     # 1. LINEAR LAYER:    m0 * input
     # 2. NONLINEAR LAYER: ReLU(m0 * input)
     # 3. LINEAR LAYER:    m1 * ReLU(m0 * input)
+    
 	lw t0, 0(s3)
     lw t1, 4(s7)
     mul t0, t0, t1
@@ -148,6 +149,7 @@ classify:
 	addi a1, x0, '\n'
     jal print_char
 end:
+	mv a0, s11
 	# Epilogue
     lw s0, 0(sp)
     lw s1, 4(sp)
@@ -167,3 +169,4 @@ end:
 error4:
 	addi a1, x0, 122
     jal exit2
+    
