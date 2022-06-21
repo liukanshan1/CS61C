@@ -77,7 +77,41 @@ main:
 # Think: why might having a1 be useful?
 f:
     # YOUR CODE GOES HERE!
-
+    addi t0, x0, -3
+    bne a0, t0, next_neg2
+    addi a0, x0, 6
+    j end
+next_neg2:
+	addi t0, x0, -2
+    bne a0, t0, next_neg1
+    addi a0, x0, 61
+    j end
+next_neg1:
+	addi t0, x0, -1
+    bne a0, t0, next_zero
+    addi a0, x0, 17
+    j end
+next_zero:
+	addi t0, x0, 0
+    bne a0, t0, next_pos1
+    addi a0, x0, -38
+    j end
+next_pos1:
+	addi t0, x0, 1
+    bne a0, t0, next_pos2
+    addi a0, x0, 19
+    j end
+next_pos2:
+	addi t0, x0, 2
+    bne a0, t0, next_pos3
+    addi a0, x0, 42
+    j end
+next_pos3:
+	addi t0, x0, 3
+    bne a0, t0, end
+    addi a0, x0, 5
+    j end
+end:
     jr ra               # Always remember to jr ra after your function!
 
 print_int:
