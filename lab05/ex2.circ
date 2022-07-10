@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.4.3-61c.7ae7f66" version="1.0">
+<project source="3.4.3-61c.cc0f4a6" version="1.0">
   This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
 
   <lib desc="#Wiring" name="0">
@@ -127,6 +127,9 @@
       <a name="label" val="clk"/>
       <a name="locked" val="true"/>
     </comp>
+    <comp lib="0" loc="(40,120)" name="Constant">
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="0" loc="(480,180)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -143,5 +146,25 @@
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="2" loc="(80,130)" name="Adder"/>
+    <comp lib="3" loc="(130,140)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(100,210)" to="(130,210)"/>
+    <wire from="(110,130)" to="(110,170)"/>
+    <wire from="(110,130)" to="(440,130)"/>
+    <wire from="(110,170)" to="(130,170)"/>
+    <wire from="(190,170)" to="(220,170)"/>
+    <wire from="(20,140)" to="(20,250)"/>
+    <wire from="(20,140)" to="(40,140)"/>
+    <wire from="(20,250)" to="(220,250)"/>
+    <wire from="(220,170)" to="(220,250)"/>
+    <wire from="(220,170)" to="(330,170)"/>
+    <wire from="(330,170)" to="(330,250)"/>
+    <wire from="(330,250)" to="(480,250)"/>
+    <wire from="(440,130)" to="(440,180)"/>
+    <wire from="(440,180)" to="(480,180)"/>
+    <wire from="(480,240)" to="(480,250)"/>
+    <wire from="(80,130)" to="(110,130)"/>
   </circuit>
 </project>
