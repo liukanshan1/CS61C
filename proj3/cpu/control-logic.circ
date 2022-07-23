@@ -277,6 +277,11 @@
     <comp lib="0" loc="(460,900)" name="Tunnel">
       <a name="label" val="PCSel"/>
     </comp>
+    <comp lib="0" loc="(470,320)" name="Constant">
+      <a name="facing" val="west"/>
+      <a name="value" val="0xcc01"/>
+      <a name="width" val="17"/>
+    </comp>
     <comp lib="0" loc="(500,210)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
@@ -433,7 +438,7 @@
       <a name="addrWidth" val="17"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 17 17
-0
+52224*0 2 802 30*0 c02
 </a>
       <a name="dataWidth" val="17"/>
     </comp>
@@ -477,7 +482,6 @@
     <wire from="(250,210)" to="(250,230)"/>
     <wire from="(250,880)" to="(310,880)"/>
     <wire from="(250,920)" to="(280,920)"/>
-    <wire from="(260,380)" to="(320,380)"/>
     <wire from="(270,230)" to="(280,230)"/>
     <wire from="(270,910)" to="(270,930)"/>
     <wire from="(270,910)" to="(310,910)"/>
@@ -491,7 +495,8 @@
     <wire from="(310,150)" to="(1040,150)"/>
     <wire from="(310,150)" to="(310,230)"/>
     <wire from="(310,230)" to="(330,230)"/>
-    <wire from="(320,380)" to="(320,390)"/>
+    <wire from="(320,320)" to="(320,390)"/>
+    <wire from="(320,320)" to="(470,320)"/>
     <wire from="(330,950)" to="(330,990)"/>
     <wire from="(330,990)" to="(340,990)"/>
     <wire from="(350,210)" to="(350,230)"/>
